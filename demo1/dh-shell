@@ -1,0 +1,47 @@
+C:\Users\karth>sqlplus <userName>/<password>@localhost:1521/FREEPDB1
+
+SQL> drop table products;
+
+
+SQL>CREATE TABLE products (
+    product_id NUMBER PRIMARY KEY,
+    product_name VARCHAR2(100),
+    category VARCHAR2(50),
+    price NUMBER
+);
+
+5. Create a sample Oracle table
+
+For testing, connect to Oracle and run:
+
+CREATE TABLE products (
+    product_id NUMBER PRIMARY KEY,
+    product_name VARCHAR2(100),
+    category VARCHAR2(50),
+    price NUMBER
+);
+
+Insert data:
+
+INSERT INTO products VALUES (
+    1,
+    'Laptop',
+    'Electronics',
+    75000
+);
+
+INSERT INTO products VALUES (
+    2,
+    'Mobile',
+    'Electronics',
+    40000
+);
+
+INSERT INTO products VALUES (
+    3,
+    'Office Chair',
+    'Furniture',
+    15000
+);
+
+COMMIT;
