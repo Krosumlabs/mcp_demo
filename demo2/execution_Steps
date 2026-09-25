@@ -1,0 +1,67 @@
+Start the MCP server
+=======================
+Open Terminal 1.
+
+Go to your project:
+
+cd C:\path\to\mcp_remote_demo
+
+Activate the environment:
+
+.venv\Scripts\activate
+
+Run:
+=====
+python remote_mcp_server.py
+
+Your server should start on:
+
+http://localhost:8000/mcp
+
+The server contains two MCP tools:
+
+Tool 1
+@mcp.tool()
+def calc(a: int,b: int) -> int:
+    return a+b
+Tool 2
+@mcp.tool()
+def get_server_info() -> str:
+    return "Remote MCP calculate server is running"
+
+Keep Terminal 1 running.
+############################
+Test the MCP server independently
+Before running the LangGraph agent, you can verify that the server is actually running.
+Open your browser and go to:
+http://localhost:8000
+############################
+Open Terminal 2.
+
+Go to the same folder:
+
+cd C:\path\to\mcp_remote_demo
+
+Activate:
+
+.venv\Scripts\activate
+
+Now run:
+
+python langgrpah_agent.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
